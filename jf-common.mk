@@ -180,7 +180,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+	init.qcom.bt.sh
 
 # Thermal
 PRODUCT_COPY_FILES += \
