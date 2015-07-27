@@ -275,11 +275,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ril
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungQualcommRIL
+    ro.telephony.ril_class=SamsungQualcommRIL \
+	telephony.lteOnGsmDevice=1 \
+	ro.telephony.default_network=9
 
 # wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+	
+# JFvelte
+PRODUCT_NAME := full_jfvelte
+PRODUCT_DEVICE := jfvelte
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := GT-I9515
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
