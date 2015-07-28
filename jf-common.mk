@@ -128,13 +128,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm8960
 
-# Loki
-PRODUCT_PACKAGES += \
-    loki_tool \
-    loki.sh \
-    loki_bootloaders \
-    recovery-transform.sh
-
 # Media Profile
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
