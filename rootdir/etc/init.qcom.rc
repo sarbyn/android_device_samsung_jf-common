@@ -81,6 +81,11 @@ on early-boot
     chmod 0664 /sys/class/graphics/fb1/format_3d
     chmod 0664 /sys/class/graphics/fb1/video_mode
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
+    
+    write /dev/wcnss_wlan 1
+    write /sys/module/subsystem_restart/parameters/restart_level 3
+    write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
+    write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.serialno}
 
 on boot-pause
     exec system/bin/battery_charging
