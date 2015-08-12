@@ -225,6 +225,12 @@ PRODUCT_PACKAGES += \
 	libwcnss_qmi \
 	wcnss_service
 	
+# Config files for hostapd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny
+	
 # SoftAP
 PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
