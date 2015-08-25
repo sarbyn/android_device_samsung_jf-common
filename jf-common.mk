@@ -127,6 +127,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/gps.conf:/system/etc/gps.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:/system/etc/sap.conf
 
+# IPv6 tethering
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes
+
 # IR
 PRODUCT_PACKAGES += \
     consumerir.msm8960
@@ -267,7 +272,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.fill_eons=1 \
     persist.radio.use_se_table_only=1 \
     ro.telephony.ril.config=newDriverCallU,newDialCode \
-    ro.ril.telephony.mqanelements=6
+    ro.ril.telephony.mqanelements=6 \
+    ro.telephony.mms_data_profile=5
 
 # gps
 PRODUCT_PROPERTY_OVERRIDES += \
