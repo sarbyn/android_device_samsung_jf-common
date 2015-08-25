@@ -227,7 +227,6 @@ PRODUCT_COPY_FILES += \
 
 # add support for our wifi
 PRODUCT_PACKAGES += \
-	libwcnss_qmi \
 	wcnss_service
 	
 # Config files for hostapd
