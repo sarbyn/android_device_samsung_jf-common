@@ -246,9 +246,9 @@ PRODUCT_COPY_FILES += \
 
 # audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.fluence.mode=endfire \
+    persist.audio.dualmic.config=endfire \
     persist.audio.vr.enable=false \
-    persist.audio.handset.mic=digital \
+    persist.audio.fluence.voicecall=true \
     persist.audio.speaker.location=high \
     ro.qc.sdk.audio.fluencetype=fluence
 
