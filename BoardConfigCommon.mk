@@ -44,9 +44,6 @@ TARGET_KERNEL_SOURCE := kernel/samsung/jf
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := jfvelte,jfveltexx,i9515,I9515,GT-I9515
-
 # Audio
 BOARD_HAVE_AUDIENCE_ES325_2MIC := true
 BOARD_HAVE_DOCK_USBAUDIO := true
@@ -69,7 +66,7 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/jfvelte/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/jf-common/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
@@ -84,7 +81,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/samsung/jfvelte/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/jf-common/cmhw
 
 # Display
 BOARD_USES_LEGACY_MMAP := true
@@ -99,7 +96,7 @@ EXTENDED_FONT_FOOTPRINT := true
 TARGET_NO_RPC := true
 
 # Includes
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/jfvelte/include
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/jf-common/include
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -129,14 +126,14 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/jfvelte/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/jf-common/rootdir/etc/fstab.qcom
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/samsung/jfvelte/ril
+BOARD_RIL_CLASS := ../../../device/samsung/jf-common/ril
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/samsung/jfvelte/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/jf-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     bluetooth.te \

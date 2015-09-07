@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(LOCAL_PATH) := device/samsung/jfvelte
+$(LOCAL_PATH) := device/samsung/jf-common
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/samsung/jf-common/jf-common-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/jfvelte/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
