@@ -41,6 +41,9 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CONFIG := cyanogen_jfve_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/jf
 
+# Bionic
+MALLOC_IMPL := dlmalloc
+
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
