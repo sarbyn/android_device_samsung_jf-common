@@ -44,6 +44,13 @@ TARGET_KERNEL_SOURCE := kernel/samsung/jf
 # Bionic
 MALLOC_IMPL := dlmalloc
 
+# Enable dex-preopt
+#ifeq ($HOST_OS),linux)
+#  ifeq ($(WITH_DEXPREOPT),)
+#    WITH_DEXPREOPT := true
+#  endif
+#endif
+
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
