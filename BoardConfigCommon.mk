@@ -41,15 +41,39 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CONFIG := cyanogen_jfve_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/jf
 
-# Bionic
-MALLOC_IMPL := dlmalloc
+# use qCLANG
+USE_CLANG_QCOM := true
+
+# give extra output when compiling
+USE_CLANG_QCOM_VERBOSE := true 
+
+# use LTO; not working at the moment
+USE_CLANG_QCOM_LTO := false
+
+# compile art with qclang; not working at the moment!
+CLANG_QCOM_COMPILE_ART := false
+
+# compile bionic with qclang
+CLANG_QCOM_COMPILE_BIONIC := true 
+
+# compile defined modules with qclang
+CLANG_QCOM_COMPILE_MIXED := true 
+
+# Here you can overwrite which modules should be compiled with qCLANG instead of GCC
+# CLANG_QCOM_FORCE_COMPILE_MODULES +=
+
+# Here you can overwrite which modules should be compiled with aCLANG instead of qCLANG
+# CLANG_QCOM_FORCE_COMPILE_ACLANG_MODULES +=
+
+# Here you can overwrite which modules shouldnt be compiled with -Ofast
+# CLANG_QCOM_DONT_REPLACE_WITH_Ofast_MODULES += 
 
 # Enable dex-preopt
-#ifeq ($HOST_OS),linux)
-#  ifeq ($(WITH_DEXPREOPT),)
-#    WITH_DEXPREOPT := true
-#  endif
-#endif
+ifeq ($(HOST_OS),linux)
+  ifeq ($(WITH_DEXPREOPT),)
+    WITH_DEXPREOPT := true
+  endif
+endif
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
