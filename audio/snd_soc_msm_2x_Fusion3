@@ -2852,8 +2852,8 @@ SectionDevice
 EndSection
 
 SectionDevice
-    Name "Speaker DMIC Stereo"
-    Comment "Stereo Mic Tx device"
+	Name "Speaker DMIC Stereo"
+	Comment "Stereo Mic Tx device [now is modified - no more stereo here]"
 
     EnableSequence
         'SLIM_0_TX Channels':0:One
@@ -2875,6 +2875,8 @@ SectionDevice
     EndSequence
 
     ACDBID	54:2
+	
+EndSection
 
 SectionDevice
     Name "Handset DMIC Stereo"
