@@ -65,7 +65,6 @@ BOARD_USES_SEPERATED_HEADSET_MIC := true
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 BOARD_USES_SEPERATED_VOIP := true
 TARGET_USES_QCOM_COMPRESSED_AUDIO := true
-AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
 QCOM_ADSP_SSR_ENABLED := false
 
 # Bluetooth
@@ -153,7 +152,7 @@ BOARD_SEPOLICY_UNION += \
     insthk.te \
     kernel.te \
     keypad_dev.te \
-    macloader.te \
+    wcnss.te \
     mdm_helper.te \
     mediaserver.te \
     mm-pp-daemon.te \
@@ -181,6 +180,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 # Wifi module
 BOARD_HAS_QCOM_WLAN              := true
 TARGET_USES_WCNSS_CTRL           := true
+TARGET_PROVIDES_WCNSS_QMI        := true
+TARGET_USES_QCOM_WCNSS_QMI       := true
 BOARD_WLAN_DEVICE                := qcwcn
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_$(BOARD_WLAN_DEVICE)

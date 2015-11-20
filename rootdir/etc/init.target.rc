@@ -324,6 +324,12 @@ service time_daemon /system/bin/time_daemon
 on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/scheduler row
 
+service wcnss-service /system/bin/wcnss_service
+    class late_start
+    user system
+    group system wifi
+    oneshot
+	
 # insthk
 service insthk /system/bin/insthk
     class main

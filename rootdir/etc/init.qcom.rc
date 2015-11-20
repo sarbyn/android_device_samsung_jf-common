@@ -369,6 +369,19 @@ service bt-dun /system/bin/sh /system/etc/init.qcom.btdun.sh
     disabled
     oneshot
 
+service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+    class late_start
+    user bluetooth
+    group qcom_oncrpc bluetooth net_bt_admin
+    disabled
+    oneshot
+
+on property:bluetooth.hciattach=true
+    start hciattach
+
+on property:bluetooth.hciattach=false
+    setprop bluetooth.status off
+	
 service bt-sap /system/bin/sapd 15
     user bluetooth
     group bluetooth net_bt_admin
@@ -526,12 +539,6 @@ service wifi-crda /system/bin/sh /system/etc/init.crda.sh
    user root
    disabled
    oneshot
-
-service wcnss-service /system/bin/wcnss_service
-    class main
-    user system
-    group system wifi qcom_diag radio
-    oneshot
 
 service hdmid /system/bin/hdmid
     class late_start
