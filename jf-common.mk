@@ -83,10 +83,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         com.dsi.ant.antradio_library \
         AntHalService \
-        libantradio \
-        ANTRadioService \
-        ANTPlusPluginsService \
-        antradio_app \
+        libantradio
 
 PRODUCT_COPY_FILES += \
         external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
@@ -216,6 +213,8 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
+    libnetcmdiface \
+    libwpa_client \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
